@@ -47,8 +47,8 @@
 5. Email configuration :
    ```bash
     MAIL_MAILER=smtp
-    MAIL_HOST=.....
-    MAIL_PORT=....
+    MAIL_HOST=mailpit
+    MAIL_PORT=1025
     MAIL_USERNAME=null
     MAIL_PASSWORD=null
     MAIL_ENCRYPTION=null

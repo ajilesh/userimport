@@ -13,10 +13,11 @@
 
 ## Prerequisites
 
-- PHP 7.4 or higher
+- PHP 8.1 or higher
+- laravel 10
 - Composer
-- MySQL or another database
-- Node.js and npm (for frontend assets)
+- MySQL database
+
 
 ## Installation
 
@@ -43,44 +44,42 @@
     ```bash
     cp .env.example .env
     ```
-
-5. Generate the application key:
+5. Email configuration :
+   ```bash
+    MAIL_MAILER=smtp
+    MAIL_HOST=.....
+    MAIL_PORT=....
+    MAIL_USERNAME=null
+    MAIL_PASSWORD=null
+    MAIL_ENCRYPTION=null
+    MAIL_FROM_ADDRESS="hello@example.com"
+    MAIL_FROM_NAME="${APP_NAME}"
+   ```
+6. Generate the application key:
 
     ```bash
     php artisan key:generate
     ```
 
-6. Run database migrations:
+7. Run database migrations:
 
     ```bash
     php artisan migrate
     ```
 
-7. Seed the database (if applicable):
+8. Import bulk userdata to the database:
 
     ```bash
-    php artisan db:seed
+    php artisan import:users storage/app/User.xlsx
     ```
 
-8. Install frontend dependencies (if applicable):
-
-    ```bash
-    npm install
-    ```
-
-9. Compile frontend assets (if applicable):
-
-    ```bash
-    npm run dev
-    ```
-
-10. Start the development server:
+9. Start the development server:
 
     ```bash
     php artisan serve
     ```
 
-11. Access the application at `http://localhost:8000`.
+10. Access the application at `http://localhost:8000`.
 
 ## Authentication
 

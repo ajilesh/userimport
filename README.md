@@ -23,7 +23,7 @@
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/your-repository.git
+    git clone https://github.com/ajilesh/userimport.git
     ```
 
 2. Navigate to the project directory:
